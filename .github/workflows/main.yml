@@ -1,0 +1,26 @@
+name : Python Application 2
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build1:
+
+     runs-on: ubuntu-latest
+
+     steps:
+     - uses: action/checkout@v4
+     - name: Set up Python 3.10
+       uses: actions/setup-python@v3
+       with:
+          python-version: "3.10"
+     - name: Run Python Application
+       run: python hello.py
+
+ test:
+ 
+
+ 
